@@ -64,11 +64,10 @@ We can use a closed bracket if number of closed brackets is less than number of 
 
 The base case (stop condition) number of open brackets == number of closed brackets == N.
 
-## Interviewing.io Solution
+## Interviewing.io Recursive Backtracking Solution
 
 This one counts down from N.
 
-It tracks how many forward parentheses are needed,
-and how many backward parenthese are needed.
+It tracks how many forward parentheses are needed, and how many backward parenthese are needed.
 
 See this [article](https://interviewing.io/questions/generate-parentheses).
