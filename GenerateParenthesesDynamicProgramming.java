@@ -67,14 +67,14 @@ public class GenerateParenthesesDynamicProgramming {
         // For every sub-problem, starting at 1, to solve for the nth problem
         for (int i = 1; i <= this.n; i++) {
 
-            System.out.printf("for current dp level i = %d%n", i);
+            System.out.printf("%nfor current dp level i = %d%n", i);
 
             System.out.printf("start iterating on previous sub-problems at 0%n");
 
             // for every sub-problem before the ith problem
             for (int j = 0; j < i; j++) {
 
-                System.out.printf("for previous dp sub-problem j = %d%n", j);
+                System.out.printf("%nfor previous dp sub-problem j = %d%n", j);
 
                 // declare a list of strings of parentheses pairs to be added to dp
                 List<String> toBeAdded = new ArrayList<>();
@@ -85,14 +85,14 @@ public class GenerateParenthesesDynamicProgramming {
                 // for every string of parentheses pair combination in the list of strings at jth position of dp
                 for (String x : dp.get(j)) {
 
-                    System.out.printf("this x string of parentheses pair combinations, <<%s>>, will be wrapped by parentheses%n", x);
+                    System.out.printf("%nthis x string of parentheses pair combinations, <<%s>>, will be wrapped by parentheses%n", x);
 
                     System.out.printf("for every parentheses pair combination of the list of strings at dp position i - j - 1 = %d%n", i - j - 1);
 
                     // for every string of parentheses pair combination in the list of strings at the i - j - 1 position of dp
                     for (String y : dp.get(i - j - 1)) {
 
-                        System.out.printf("this y string of parentheses pair combination, <<%s>>, will be appended to the wrapped value%n", y);
+                        System.out.printf("%nthis y string of parentheses pair combination, <<%s>>, will be appended to the wrapped value%n", y);
 
                         toBeAdded.add("(" + x + ")" + y);
 
