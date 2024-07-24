@@ -1,0 +1,74 @@
+Hello Generate Parentheses Dynamic Programming Solution #1
+
+solution call
+declared the dynamic programming list of list of strings
+initialized 3 empty list of strings for every parentheses pair combination
+set the solution for n = 0; it is no pairs of parentheses (empty string)
+start iterating on current problem at 1; 0 was set above
+for current dp level i = 1
+start iterating on previous sub-problems at 0
+for previous dp sub-problem j = 0
+declared new to-be-added list of strings of parentheses pair combinations
+for every parentheses pair combination of the list of strings at dp position j = 0
+this x string of parentheses pair combinations, <<>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 0
+this y string of parentheses pair combination, <<>>, will be appended to the wrapped value
+added all string parentheses pair combinations of to-be-added list to the dp list of index 1
+increment j and test condition j < i
+increment i and test condition i <= n
+for current dp level i = 2
+start iterating on previous sub-problems at 0
+for previous dp sub-problem j = 0
+declared new to-be-added list of strings of parentheses pair combinations
+for every parentheses pair combination of the list of strings at dp position j = 0
+this x string of parentheses pair combinations, <<>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 1
+this y string of parentheses pair combination, <<()>>, will be appended to the wrapped value
+added all string parentheses pair combinations of to-be-added list to the dp list of index 2
+increment j and test condition j < i
+for previous dp sub-problem j = 1
+declared new to-be-added list of strings of parentheses pair combinations
+for every parentheses pair combination of the list of strings at dp position j = 1
+this x string of parentheses pair combinations, <<()>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 0
+this y string of parentheses pair combination, <<>>, will be appended to the wrapped value
+added all string parentheses pair combinations of to-be-added list to the dp list of index 2
+increment j and test condition j < i
+increment i and test condition i <= n
+for current dp level i = 3
+start iterating on previous sub-problems at 0
+for previous dp sub-problem j = 0
+declared new to-be-added list of strings of parentheses pair combinations
+for every parentheses pair combination of the list of strings at dp position j = 0
+this x string of parentheses pair combinations, <<>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 2
+this y string of parentheses pair combination, <<()()>>, will be appended to the wrapped value
+this y string of parentheses pair combination, <<(())>>, will be appended to the wrapped value
+added all string parentheses pair combinations of to-be-added list to the dp list of index 3
+increment j and test condition j < i
+for previous dp sub-problem j = 1
+declared new to-be-added list of strings of parentheses pair combinations
+for every parentheses pair combination of the list of strings at dp position j = 1
+this x string of parentheses pair combinations, <<()>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 1
+this y string of parentheses pair combination, <<()>>, will be appended to the wrapped value
+added all string parentheses pair combinations of to-be-added list to the dp list of index 3
+increment j and test condition j < i
+for previous dp sub-problem j = 2
+declared new to-be-added list of strings of parentheses pair combinations
+for every parentheses pair combination of the list of strings at dp position j = 2
+this x string of parentheses pair combinations, <<()()>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 0
+this y string of parentheses pair combination, <<>>, will be appended to the wrapped value
+this x string of parentheses pair combinations, <<(())>>, will be wrapped by parentheses
+for every parentheses pair combination of the list of strings at dp position i - j - 1 = 0
+this y string of parentheses pair combination, <<>>, will be appended to the wrapped value
+added all string parentheses pair combinations of to-be-added list to the dp list of index 3
+increment j and test condition j < i
+increment i and test condition i <= n
+the parentheses pair combinations are
+Combination: ()()()
+Combination: ()(())
+Combination: (())()
+Combination: (()())
+Combination: ((()))
